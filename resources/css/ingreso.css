@@ -1,0 +1,18 @@
+.formulario{
+	background: rgba(203, 186, 170, 0.9);
+	height: 500px;
+	width: 75%;
+	margin-top: 80px;
+	margin-left: 12%;
+	margin-right: 13%;
+	font-family: Verdana;
+}
+.posicion{
+	padding-top: 10px;
+	padding-left: 175px;
+	padding-bottom: 10px;
+}
+.titulo, .autor, .anio, .editorial, .descripcion{
+	padding-top: 10px;
+}
+/*revisar el word del escritorio con lo colores */
