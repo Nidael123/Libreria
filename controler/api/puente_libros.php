@@ -6,12 +6,11 @@
 	switch ($_SERVER['REQUEST_METHOD']) 
 	{
 		case 'POST':
-			echo("estoy en post");
 			$file_name = $_FILES['imagen']['name'];
 			$file_tmp = $_FILES['imagen']['tmp_name'];
 			
-			//$route = $_SERVER["DOCUMENT_ROOT"]."/Libreria/resources/imagenes_libros/".$file_name;
 			$route = $_SERVER["DOCUMENT_ROOT"]."/Libreria/resources/imagenes_libros/".$_POST['titulo'];
+			
 
 			if (!is_dir($route)) {
     			mkdir($route, 0777, true);
@@ -25,8 +24,9 @@
 			}
 			if(move_uploaded_file($file_tmp, $route2))
 			{
+				//$route2 = "resources/imagenes_libros/".$_POST['titulo']."/".$file_name;
 				$variable = new libro();
-				$variable->cntr_ingreso($_POST['titulo'],$_POST['editorial'],$_POST['anio'],$_POST['autor'],$route2);
+				$variable->cntr_ingreso($_POST['titulo'],$_POST['editorial'],$_POST['anio'],$_POST['autor'],"resources/imagenes_libros/".$_POST['titulo']."/".$file_name);
 				$variable->guardar_libro();
 			}
 			else
@@ -35,7 +35,6 @@
 			}
 		break;
 		case 'GET':
-			echo("estoy en get");
 			$variable = new libro();
 			$variable->buscar_libros();
 		break;
