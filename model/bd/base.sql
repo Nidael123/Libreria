@@ -6,13 +6,14 @@ create table libro(
     anio date,
     autor int,
     image varchar(255),
+    descripcion varchar(255),
     estado int default 2
 );
 create table autores(
     id_autor int AUTO_INCREMENT PRIMARY key,
 	nombre varchar(255),
 );
-create table editoria(
+create table editorial(
     id_editorial int AUTO_INCREMENT PRIMARY key,
 	nombre varchar(255),
 );
@@ -28,7 +29,7 @@ alter table libro add constraint l3 FOREIGN key (estado) REFERENCES estado(id_es
 INSERT INTO autores (nombre) values ("daniel");
 INSERT INTO autores (nombre) values ("becker");
 INSERT INTO autores (nombre) values ("victor hugo");
-INSERT INTO autores (nombre) values ("chopin");
+INSERT INTO autores (nombre) values ("");
 INSERT INTO autores (nombre) values ("tolomeo");
 INSERT INTO autores (nombre) values ("ernesto");
 INSERT INTO autores (nombre) values ("marina");
@@ -43,3 +44,4 @@ INSERT INTO editorial (nombre) values ("francia");
 
 INSERT INTO estado (nombre) values ("prestado");
 INSERT INTO estado (nombre) values ("libre");
+libreria  dany   Ab_PRbVu7wm3ys

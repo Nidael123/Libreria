@@ -14,7 +14,7 @@
 			$buscar_autor = null;
 			require_once "../resources/templates/nav-view.php";
 		 ?>
-		 <section class="section">seccion</section>  <!-- solo section es el que se realiza en cada pagina-->
+		 <section class="section"><h1>en mantenimiento </h1></section>  <!-- solo section es el que se realiza en cada pagina-->
 		 
 		 <?php 
 			require_once "../resources/templates/footer-view.php";

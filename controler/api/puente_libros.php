@@ -1,4 +1,4 @@
-<?php  
+<?php  ob_start();
 	require_once '../../model/objetos/libros.php';
 
 	$variable = null;
@@ -17,7 +17,7 @@
 			}
 			//$route2 = "resources/imagenes_libros/".$file_name;
 			$route2 = $route."/".$file_name;
-
+			
 			if(empty($_FILES['imagen']["name"]))
 			{
 				return;
@@ -26,7 +26,7 @@
 			{
 				//$route2 = "resources/imagenes_libros/".$_POST['titulo']."/".$file_name;
 				$variable = new libro();
-				$variable->cntr_ingreso($_POST['titulo'],$_POST['editorial'],$_POST['anio'],$_POST['autor'],"resources/imagenes_libros/".$_POST['titulo']."/".$file_name);
+				$variable->cntr_ingreso($_POST['titulo'],$_POST['editorial'],$_POST['anio'],$_POST['autor'],"resources/imagenes_libros/".$_POST['titulo']."/".$file_name,$_POST['descripcion']);
 				$variable->guardar_libro();
 			}
 			else
@@ -42,5 +42,5 @@
 			echo("estoy en put");
 		break;
 	}
-	//header("Location: ../../view/ingresar.php");
+	header("Location: ../../index.php");
 ?>

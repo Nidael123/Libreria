@@ -31,7 +31,6 @@
 					}
 					print_r(json_encode($array1));
 				}
-
 			}
 			else{
 				echo $error;
@@ -94,8 +93,8 @@
 				{
 					foreach ($datos as $key) 
 					{
-						$libro->cnts_busqueda($key['id_libro'],$key['titulo'],$key['editorial'],$key['anio'],$key['autor'],$key['image']);
-						$array_help = array('id_libro'=>$libro->get_id_libro(), 'titulo'=> $libro->get_titulo(),'editorial'=>$libro->get_editorial(),'anio'=>$libro->get_anio(),'autor'=>$libro->get_autor(),'image'=>$libro->get_image()); 
+						$libro->cnts_busqueda($key['id_libro'],$key['titulo'],$key['editorial'],$key['anio'],$key['autor'],$key['image'],$key['descripcion']);
+						$array_help = array('id_libro'=>$libro->get_id_libro(), 'titulo'=> $libro->get_titulo(),'editorial'=>$libro->get_editorial(),'anio'=>$libro->get_anio(),'autor'=>$libro->get_autor(),'image'=>$libro->get_image(),'descripcion'=>$libro->get_descripcion()); 
 						array_push($array1, $array_help);
 					}
 					print_r(json_encode($array1));

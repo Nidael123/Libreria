@@ -15,16 +15,18 @@
 		private $autor = null;//int
 		private $image = null;
 		private $estado = null;//int
+		private $descripcion = null;
 
-		public function cntr_ingreso($_titulo, $_editorial, $_anio, $_autor, $_image)
+		public function cntr_ingreso($_titulo, $_editorial, $_anio, $_autor, $_image ,$_descripcion)
 		{
 			$this->titulo = $_titulo;
 			$this->editorial = $_editorial;
 			$this->anio = $_anio;
 			$this->autor = $_autor;
 			$this->image = $_image;
+			$this->descripcion = $_descripcion;
 		}
-		public function cnts_busqueda($_id_libro, $_titulo, $_editorial, $_anio, $_autor, $_image)
+		public function cnts_busqueda($_id_libro, $_titulo, $_editorial, $_anio, $_autor, $_image, $_descripcion)
 		{
 			$this->titulo = $_titulo;
 			$this->editorial = $_editorial;
@@ -32,12 +34,13 @@
 			$this->autor = $_autor;
 			$this->image = $_image;
 			$this->id_libro = $_id_libro;
+			$this->descripcion = $_descripcion;
 		}
 
 		public function guardar_libro()
 		{
 			$variable = new guardar();
-			$variable->libro_save($this->titulo, $this->editorial, $this->anio, $this->autor, $this->image);	
+			$variable->libro_save($this->titulo, $this->editorial, $this->anio, $this->autor, $this->image, $this->descripcion);	
 		}
 
 		public function buscar_libros()
@@ -51,5 +54,6 @@
 		public function get_anio(){return($this->anio);}
 		public function get_autor(){return($this->autor);}
 		public function get_image(){return($this->image);}
+		public function get_descripcion(){return($this->descripcion);}
 	}
 ?>

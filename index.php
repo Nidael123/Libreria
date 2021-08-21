@@ -22,6 +22,13 @@
 		 ?>
 
 		 <section class="section">
+		 	<!--<div class="book">
+		 		<div class="title">dffff</div>
+		 		<div class="image"><img src="resources/image/logo.jpg" alt="" width="300" height="200"></div>
+		 		<div class="texto">
+		 			<div class="descripcion"><h3>aos jda</h3></div>
+		 		</div>
+		 	</div>-->
 		 	<?php  
 		 		foreach ($resultado as $key) {
 		 			echo '<div class="book">
@@ -29,8 +36,9 @@
 						 			$key->titulo
 						 		.'</div>
 						 		<div class = "image">
-						 			<img class = "form_image" src="'.$key->image.'" alt="">
+						 			<img class = "form_image" src="'.$key->image.'" alt="" width="300" height="200"></ >
 						 		</div>
+						 		<div class="texto">'.$key->descripcion.'</div>
 						 	</div>';
 		 		}
 		 	?>

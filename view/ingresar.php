@@ -66,7 +66,7 @@
 				 	
 				 	<div class="descripcion">
 				 		<label for="">DESCRIPCION</label><br>
-				 		<textarea name="descripcion" cols="30" rows="10" name="descripcion"></textarea><br>
+				 		<textarea cols="30" rows="10" name="descripcion"></textarea><br>
 				 	</div>
 				 	
 				 	<label for="">PORTADA</label>

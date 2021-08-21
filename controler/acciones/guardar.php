@@ -7,11 +7,11 @@
 	{
 		public $variable = null;
 
-		public function libro_save($titulo, $editorial, $anio, $autor, $image)
+		public function libro_save($titulo, $editorial, $anio, $autor, $image,$descripcion)
 		{
 			try 
 			{
-				$sql = "insert into libro(titulo,editorial,anio,autor,image)values(:titulo,:editorial,:anio,:autor,:ruta)";
+				$sql = "insert into libro(titulo,editorial,anio,autor,image,descripcion)values(:titulo,:editorial,:anio,:autor,:ruta,:descripcion)";
 				$variable = new coneccion();
 				$con = $variable->conectar();
 
@@ -22,6 +22,7 @@
 				$query->bindParam(':anio',$anio, PDO::PARAM_STR,25);
 				$query->bindParam(':autor',$autor, PDO::PARAM_INT);
 				$query->bindParam(':ruta', $image,PDO::PARAM_STR,25);
+				$query->bindParam(':descripcion', $descripcion,PDO::PARAM_STR,25);
 
 				$error = $query->execute();
 

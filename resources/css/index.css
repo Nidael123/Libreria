@@ -3,20 +3,42 @@
 	margin: 40px;
 	width: 90%;
 	height: 500px ;
+	display: grid;
+	grid-template-rows: 100px  100px;
+	grid-template-columns: 45% 55%;
+	grid-template-areas: 
+	"title title"
+	"image texto";
 }
 .title{
+	/*background: grey;*/
+	grid-area: title;
 	padding-top: 30px;
-	width: 80%;
-	height: 50px;
 	text-align: center;
 }
 .image{
+	align-items: center;
+	margin-top: 70px;
+	margin-left: 50px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	grid-area: image;
 	background: blue;
-	margin-left: 40px;
-	width: 40%;
-	height: 300px;
+	width: 300px;
 }
 .image> .form_image{
 	width: 100%;
+}
+.texto{
+	margin-top: 30px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
 	height: 300px;
+	grid-area: texto;
+	background: brown; 
+}
+.texto > .descripcion > h3{
+	padding: 50px;
+	background: green;
 }
