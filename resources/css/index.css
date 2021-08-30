@@ -4,41 +4,55 @@
 	width: 90%;
 	height: 500px ;
 	display: grid;
-	grid-template-rows: 100px  100px;
+	grid-template-rows: 100px 300px 100px;
 	grid-template-columns: 45% 55%;
 	grid-template-areas: 
 	"title title"
-	"image texto";
+	"image texto"
+	"reference reference";
 }
 .title{
-	/*background: grey;*/
 	grid-area: title;
-	padding-top: 30px;
+	background: #8d99ae;
+}
+.title > h2 {
+	font-size: 30px;
 	text-align: center;
+	text-decoration: underline;
 }
 .image{
-	align-items: center;
-	margin-top: 70px;
-	margin-left: 50px;
-	margin-right: 30px;
-	margin-bottom: 30px;
 	grid-area: image;
-	background: blue;
-	width: 300px;
+	background: #2b2d42;
 }
-.image> .form_image{
-	width: 100%;
+
+.image > img{
+	object-fit: cover;
+	margin: 50px 22px auto 22px;
 }
 .texto{
-	margin-top: 30px;
-	margin-left: 50px;
-	margin-right: 50px;
-	margin-bottom: 50px;
-	height: 300px;
 	grid-area: texto;
-	background: brown; 
 }
-.texto > .descripcion > h3{
-	padding: 50px;
-	background: green;
+
+.info{
+	margin: 15px;
+}
+
+.reference{
+	grid-area: reference;
+	background: #f8f32b;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+.cuadro{
+	background: white;
+	width: 75px;
+	height: 75px;
+	margin-right: 50px;
+	border: 1px solid;
+	text-align: center;
+}
+.data{
+	margin-top: 10px;
+	text-align: center;
 }

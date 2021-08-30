@@ -76,7 +76,7 @@
 		public function todos_libros()
 		{
 			$libro = new libro();
-			$sql = "select * from libro";
+			$sql = "select id_libro,titulo,(ed.nombre) as editorial,anio,(au.nombre)as autor,image,descripcion from libro as li inner JOIN autores as au on  au.id_autor = li.autor inner join editorial as ed on ed.id_editorial = li.editorial";
 			$con = new coneccion();
 			$variable = $con->conectar();
 			//echo $variable;//IMPORTANTE HAY QUE MANEJAR LOS ERRORES 
@@ -104,6 +104,6 @@
 			else{
 				echo $error;
 			}
-		}	
+		}
 	}
 ?>

@@ -50,6 +50,10 @@ html{
 	background: rgba(12, 17, 44, 0.5);
 	grid-area: aside;
 }
+.aside > h1{
+	color: white;
+
+}
 /*    section  */
 .section{
 	background: rgba(12, 17, 44, 0.5);

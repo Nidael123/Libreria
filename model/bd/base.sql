@@ -7,6 +7,7 @@ create table libro(
     autor int,
     image varchar(255),
     descripcion varchar(255),
+    veces_prestado int default 0,
     estado int default 2
 );
 create table autores(
