@@ -22,14 +22,14 @@ html{
 	margin-top: 25px;
 	display: inline-block;
 	list-style: none;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 
 .nav > ul > li > a{
 	color: white;
 	text-decoration: none;
-	padding: 50px;
-	margin: 20px;
+	padding: 25px;
+	margin: 10px;
 }
 
 .nav  ul a:hover {
@@ -80,4 +80,39 @@ html{
 	"nav nav"
 	"seccion aside"
 	"footer footer";
+}
+@media (max-width: 800px){
+	.container{
+		padding-left: 10px;
+		padding-right: 10px;
+		height: 100%;
+		display: grid;
+		gap:  10px;
+		grid-template-rows: 100px auto auto 50px;
+		grid-template-columns: auto;
+		grid-template-areas: 
+		"nav nav"
+		"seccion seccion"
+		"aside aside"
+		"footer footer";
+	}
+	.nav > ul > li {
+		margin-top: 25px;
+		display: inline-block;
+		list-style: none;
+		padding-left: 10px;
+	}
+	.nav > ul > li > a{
+		color: white;
+		text-decoration: none;
+		padding: 15px;
+		margin: 5px;
+	}
+	.nav  ul a:hover {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		color: black;
+	}
 }

@@ -12,11 +12,11 @@ create table libro(
 );
 create table autores(
     id_autor int AUTO_INCREMENT PRIMARY key,
-	nombre varchar(255),
+	nombre varchar(255)
 );
 create table editorial(
     id_editorial int AUTO_INCREMENT PRIMARY key,
-	nombre varchar(255),
+	nombre varchar(255)
 );
 create table estado(
 	id_estado int AUTO_INCREMENT PRIMARY key,
