@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="resources/css/base.css">
 	<link rel="stylesheet" href="resources/css/index.css">
 	<link rel="stylesheet" href="resources/css/aside.css">
+	<link rel="stylesheet" href="resources/css/nav.css">
 	<title>Document</title>
 </head>
 	<body class="container">

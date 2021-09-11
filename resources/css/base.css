@@ -49,6 +49,8 @@ html{
 .aside{
 	background: rgba(12, 17, 44, 0.5);
 	grid-area: aside;
+	display: flex;
+	justify-content: center;
 }
 .aside > h1{
 	color: white;
@@ -81,7 +83,7 @@ html{
 	"seccion aside"
 	"footer footer";
 }
-@media (max-width: 800px){
+@media (max-width: 1300px){
 	.container{
 		padding-left: 10px;
 		padding-right: 10px;

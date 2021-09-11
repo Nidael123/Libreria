@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../resources/css/base.css">
+	<link rel="stylesheet" href="../resources/css/nav.css">
 	<title>Document</title>
 </head>
 	<body class="container">
